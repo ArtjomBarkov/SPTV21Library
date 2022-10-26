@@ -18,6 +18,7 @@ public class Book {
     private int quantity;
 
     public Book() {
+        authors=new Author[0];
     }
 
     public String getBookName() {
@@ -38,7 +39,7 @@ public class Book {
 
     public void addAuthor(Author author){
         Author[] newAuthors = Arrays.copyOf(authors,authors.length+1);
-        newAuthors(newAuthors.length+1) = author;
+        newAuthors[newAuthors.length-1] = author;
         authors = newAuthors;
     }
             
@@ -68,6 +69,10 @@ public class Book {
     }
 
     public void setPublisedYear(int publishedYear) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void removeAuthor(int numDeleteAuthor) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
